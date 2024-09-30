@@ -12,5 +12,5 @@ BaseType_t signal_request_calculate(SemaphoreHandle_t request,
                                     SemaphoreHandle_t response,
                                     struct signal_data *data) {
     xSemaphoreGive(request);
-    return xSemaphoreTake(response, portMAX_DELAY);
+    return xSemaphoreTake(response, 100);
 }
